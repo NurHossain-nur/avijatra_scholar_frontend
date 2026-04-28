@@ -58,6 +58,12 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
+
+        <div className="flex justify-end -mt-3">
+          <Link to="/forgot-password" className="text-sm text-slate-400 hover:text-blue-400 transition-colors">
+            Forgot Password?
+          </Link>
+        </div>
         
         <button 
           type="submit" 

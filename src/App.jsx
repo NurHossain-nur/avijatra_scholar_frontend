@@ -8,6 +8,9 @@ import LiveRoom from './pages/LiveRoom';
 import PrivateRoute from './routes/PrivateRoute';
 import QuizView from './pages/QuizView';
 import NoteDetailView from './pages/NoteDetailView';
+import ResetPassword from './pages/ResetPassword';
+import ForgotPassword from './pages/ForgotPassword';
+import VerifyEmail from './pages/VerifyEmail';
 
 function App() {
   return (
@@ -44,6 +47,10 @@ function App() {
                 <NoteDetailView />
               </PrivateRoute>
             } />
+
+            <Route path="/verify-email/:token" element={<VerifyEmail />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/reset-password/:token" element={<ResetPassword />} />
 
           </Routes>
         </main>
