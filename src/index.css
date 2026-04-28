@@ -58,6 +58,29 @@ body {
 }
 
 
+/* Force the browser's native elements (like scrollbars and autofill) into dark mode */
+:root {
+  color-scheme: dark;
+}
+
+/* Paint the base layer of the entire app so no white edges peek through */
+body {
+  background-color: var(--color-slate-950);
+  color: var(--color-slate-200);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Optional: Premium hidden scrollbar for your live notes section */
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hidden-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 
 /* Hide scrollbar for Chrome, Safari and Opera */
